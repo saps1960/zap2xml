@@ -238,13 +238,28 @@ export function buildProgramsXml(data: GridApiResponse): string {
       if (event.duration) {
         xml += `    <length units="minutes">${escapeXml(event.duration)}</length>\n`;
       }
-
+      // Changed to allow for both horizontal and vertical thumbnails
       if (event.thumbnail) {
         let src = event.thumbnail.startsWith("http")
             ? event.thumbnail
             : "https://zpmc.tmsimg.com/assets/" + event.thumbnail + ".jpg";
-        src = src.replace("zap2it.tmsimg.com", "zpmc.tmsimg.com"); 
+
+        src = src
+          .replace("zap2it.tmsimg.com", "zpmc.tmsimg.com")
+          .replace("emby.tmsimg.com", "zpmc.tmsimg.com");
+
+        // Always output the original (usually vertical)
         xml += `    <icon src="${escapeXml(src)}" />\n`;
+
+        // Also try to create a horizontal version
+        const horizontal = src
+          .replace(/_v(\d)/g, "_h$1")
+          .replace(/_v8/g, "_h9")
+          .replace(/_b_v/g, "_b_h");
+
+        if (horizontal !== src) {
+          xml += `    <icon src="${escapeXml(horizontal)}" />\n`;
+        }
       }
 
       if (event.program.seriesId && (event.program as any).tmsId) {
