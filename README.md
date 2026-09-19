@@ -11,10 +11,10 @@ I also *somewhat* maintain a version of the original in the [historical-perl bra
 # Recent updates
 
 # (2026-09-19)
-*Fix for missing thumbnails:
+* Fix for missing thumbnails:
   Replaced emby.tmsimg.com with zpmc.tmsimg.com
   Replaced zap2it.tmsimg.com with zpmc.tmsimg.com
-*Change to allow for horizontal and vertical thumbnails
+* Change to allow for horizontal and vertical thumbnails
 
 # (2025-08-20)
 
