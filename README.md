@@ -1,9 +1,3 @@
-Replaced emby.tmsimg.com with zpmc.tmsimg.com
-
-Replaced zap2it.tmsimg.com with zpmc.tmsimg.com
-
-
-
 # zap2xml
 
 Automate TV guides to XMLTV format. Easy to use, up-to-date. See below for getting started.
@@ -15,6 +9,12 @@ I also *somewhat* maintain a version of the original in the [historical-perl bra
 ### Need help? [Finding a lineup](https://github.com/jesmannstl/zap2xml/wiki/Finding-a-Lineup-ID) or for [Dish and DirecTV lineups](https://github.com/jesmannstl/zap2xml/wiki/US-Dish-Directv-Lineups).  Other help? Drop a line in the [Discussions](https://github.com/jesmannstl/zap2xml/discussions)
 
 # Recent updates
+
+# (2026-09-19)
+*Fix for missing thumbnails:
+  Replaced emby.tmsimg.com with zpmc.tmsimg.com
+  Replaced zap2it.tmsimg.com with zpmc.tmsimg.com
+*Change to allow for horizontal and vertical thumbnails
 
 # (2025-08-20)
 
